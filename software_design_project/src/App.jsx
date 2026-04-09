@@ -4,6 +4,8 @@
   import SignIn from "./pages/signin"
   import AccountLogin from "./pages/AccountLogin"
   import ProductPage from "./pages/productPages/ProductPage"
+  import { useCarouselMemory } from "./useCarouselMemory"
+  import { useNavigate } from "react-router-dom"  
 
   const products1 = [
     { name: "T-shirt", img: "/images/1/t-shirt.jpg", label: "-", papers: "-", delivery: "-" },
@@ -46,10 +48,12 @@
     { name: "Backlit", img: "/images/5/backlit.jpg", label: "-", papers: "-", delivery: "-" },
   ]
 
+
   function ProductCard({ product }) {
+    const navigate = useNavigate()
     return (
       <div
-        onClick={() => window.location.href = `/product/${product.name.toLowerCase().replace(/\s+/g, '-')}`}
+        onClick={() => navigate(`/product/${product.name.toLowerCase().replace(/\s+/g, '-')}`)}
         className="flex flex-col w-80 cursor-pointer hover:shadow-xl overflow-hidden bg-white"
       >
         <h2 className="text-red-500 font-bold mb-2 text-xl">{product.name}</h2>
@@ -63,8 +67,8 @@
     )
   }
 
-  function Carousel({ products }) {
-    const [startIndex, setStartIndex] = useState(0)
+  function Carousel({ products, id }) {
+    const [startIndex, setStartIndex] = useCarouselMemory(id) 
     const [slideClass, setSlideClass] = useState("")
     const visibleCount = 3
 
@@ -121,13 +125,13 @@
       <div className="flex-1 pt-10">
         <p className="flex items-center justify-center"><img src="/banner/poster.jpg" /></p>
         <h1 className="text-center text-3xl font-bold text-gray-500 pt-10">Best-Selling Products</h1>
-        <Carousel products={products1} />
-        <Carousel products={products2} />
-        <Carousel products={products3} />
+        <Carousel id="group-1" products={products1} />
+        <Carousel id="group-2" products={products2} />
+        <Carousel id="group-3" products={products3} />
         <h1 className="text-center text-3xl font-bold pt-10 text-gray-500">Other Print Products</h1>
-        <Carousel products={products4} />
+        <Carousel id="group-4" products={products4} />
         <h1 className="text-center text-3xl font-bold pt-10 text-gray-500">We Also Do</h1>
-        <Carousel products={products5} />
+        <Carousel id="group-5" products={products5} />
       </div>
     )
   }

@@ -1,33 +1,43 @@
 import { useEffect, useRef } from "react"
 import { useLocation } from "react-router-dom"
 
+const scrollPositions = {}
+
 export default function ScrollToTop() {
 const { pathname } = useLocation()
 const prevPathname = useRef(pathname)
-const scrollPositions = useRef({})
 
 useEffect(() => {
 const handleScroll = () => {
-    scrollPositions.current[prevPathname.current] = window.scrollY
+    scrollPositions[prevPathname.current] = window.scrollY
 }
-
 window.addEventListener("scroll", handleScroll, { passive: true })
 return () => window.removeEventListener("scroll", handleScroll)
 }, [])
 
 useEffect(() => {
-const isLogoClick = window.__scrollToTop === true
-const savedY = scrollPositions.current[pathname]
-
-if (isLogoClick) {
+if (window.__scrollToTop === true) {
     window.scrollTo(0, 0)
     window.__scrollToTop = false
-} else if (savedY !== undefined) {
-    // Restore saved scroll position (back/forward navigation)
-    requestAnimationFrame(() => window.scrollTo(0, savedY))
+    prevPathname.current = pathname
+    return
+}
+
+const savedY = scrollPositions[pathname]
+
+// Lock scroll during transition so the jump is invisible
+document.documentElement.classList.add("navigating")
+
+if (savedY !== undefined) {
+    setTimeout(() => {
+    window.scrollTo({ top: savedY, behavior: "instant" })
+    document.documentElement.classList.remove("navigating")
+    }, 400)
 } else {
-    // New page visit (not back/forward), scroll to top
     window.scrollTo(0, 0)
+    setTimeout(() => {
+    document.documentElement.classList.remove("navigating")
+    }, 400)
 }
 
 prevPathname.current = pathname

@@ -4,6 +4,16 @@ import MugOrderForm         from "./1/mug/MugOrderForm"
 import TarpaulinOrderForm   from "./1/tarpaulin/TarpaulinOrderForm"
 import StickerOrderForm     from "./1/sticker/StickerOrderForm"
 import SintraBoardOrderForm from "./1/sintra/SintraBoardOrderForm.jsx"
+import PullUpBannerOrderForm from "./2/banner/PullUpBannerOrderForm"
+import FrostedStickerOrderForm from "./2/frosted/FrostedStickerOrderForm"
+import LanyardOrderForm from "./2/lanyard/LanyardOrderForm"
+import PhotocopyOrderForm from "./2/photocopy/PhotocopyOrderForm"
+import ButtonOrderForm from "./3/button/ButtonOrderForm"
+import CapOrderForm from "./3/cap/CapOrderForm"
+
+
+
+
 
 // ── Helper ─────────────────────────────────────────────────────────────────────
 function toReadable(slug) {
@@ -41,6 +51,37 @@ label:    "Sintra Board Printing",
 subtitle: "Professional PVC signage boards — customize size, thickness, and mounting options.",
 Form:     SintraBoardOrderForm,
 },
+"pull-up-banner": {
+label: "Pull-Up Banner Printing",
+subtitle: "Professional roll-up banners — customize size, material, and stand type.",
+Form: PullUpBannerOrderForm,
+},
+"frosted-sticker": {
+label: "Frosted Sticker Printing",
+subtitle: "Custom frosted vinyl for glass, windows, and office partitions.",
+Form: FrostedStickerOrderForm,
+},
+"button-pin": {
+label: "Button Pin Printing",
+subtitle: "Custom pin buttons — design your own or upload artwork.",
+Form: ButtonOrderForm,
+},
+"lanyard": {
+label: "Lanyard Printing",
+subtitle: "Customize width, material, hooks, and design for your lanyards.",
+Form: LanyardOrderForm,
+},
+"cap": {
+label: "Cap Printing",
+subtitle: "Custom embroidered and printed caps — single or bulk orders.",
+Form: CapOrderForm,
+},
+"photocopy": {
+label: "Photocopy Services",
+subtitle: "Fast, affordable, and high-quality photocopying for all your document needs.",
+Form: PhotocopyOrderForm,
+},
+
 }
 
 // ── Shared page shell ──────────────────────────────────────────────────────────

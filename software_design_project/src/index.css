@@ -91,3 +91,7 @@ animation: slideOutLeft 0.2s ease forwards;
 .carousel-slide-out-right {
 animation: slideOutRight 0.2s ease forwards;
 }
+
+html.navigating {
+overflow: hidden;
+}
