@@ -9,6 +9,7 @@ import FrostedStickerOrderForm from "./2/frosted/FrostedStickerOrderForm"
 import LanyardOrderForm from "./2/lanyard/LanyardOrderForm"
 import PhotocopyOrderForm from "./2/photocopy/PhotocopyOrderForm"
 import PVCOrderForm from "./2/pvc/PVCOrderForm"
+import TransparentStickerOrderForm from "./2/transparent/TransparentStickerOrderForm"
 import ButtonOrderForm from "./3/button/ButtonOrderForm"
 import CapOrderForm from "./3/cap/CapOrderForm"
 
@@ -86,6 +87,11 @@ Form: PhotocopyOrderForm,
 label:    "PVC ID Printing",
 subtitle: "Professional PVC ID cards — single or bulk production.",
 Form:     PVCOrderForm,
+},
+"transparent-sticker": {
+label: "Transparent Sticker Printing",
+subtitle: "Clear vinyl stickers with white ink options for glass, plastic, and packaging.",
+Form: TransparentStickerOrderForm,
 },
 }
 
