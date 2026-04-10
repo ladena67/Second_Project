@@ -22,6 +22,11 @@ import XBannerOrderForm from "./3/x-banner/X-BannerOrderForm"
 import BagTagOrderForm from "./4/bagtag/BagTagOrderForm"
 import EcoBagOrderForm from "./4/ecobag/EcoBagOrderForm"
 import KeyChainOrderForm from "./4/keychain/KeyChainOrderForm"
+import PortaBoothOrderForm from "./4/portabooth/PortaBoothOrderForm"
+import RoundFanOrderForm from "./4/roundfan/RoundFanOrderForm"
+import WallClockOrderForm from "./4/wallclock/WallClockOrderForm"
+import TumblrOrderForm from "./4/tumblr/TumblrOrderForm"
+import RefMagnetOrderForm from "./4/refmagnet/RefMagnetOrderForm"
 import BacklitOrderForm from "./5/backlit/BackLitOrderForm"
 import UmbrellaOrderForm from "./5/umbrella/UmbrellaOrderForm"
 
@@ -160,6 +165,31 @@ Form:     EcoBagOrderForm,
 label:    "Keychain Printing",
 subtitle: "Custom acrylic, PVC, metal, and wooden keychains — with glitter, holographic, and bulk options.",
 Form:     KeyChainOrderForm,
+},
+"portabooth": {
+label: "Portable Photobooth",
+subtitle: "Book your portable photobooth for events — open-air, enclosed, or 360°.",
+Form: PortaBoothOrderForm,
+},
+"round-fan": {
+label: "Round Fan Printing",
+subtitle: "Custom colored-rim fans for campaigns, elections, and events.",
+Form: RoundFanOrderForm,
+},
+"wallclock": {
+label: "Wall Clock Printing",
+subtitle: "Custom printed wall clocks — analog, photo, acrylic, and wooden styles.",
+Form: WallClockOrderForm,
+},
+"tumblr": {
+label: "Tumbler Printing",
+subtitle: "Custom printed tumblers — stainless, acrylic, glass, and more.",
+Form: TumblrOrderForm,
+},
+"ref-magnet": {
+label:    "Ref Magnet Printing",
+subtitle: "Custom refrigerator magnets for souvenirs, events, and business promotions.",
+Form: RefMagnetOrderForm,
 },
 }
 

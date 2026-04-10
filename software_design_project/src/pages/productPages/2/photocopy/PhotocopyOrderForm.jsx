@@ -269,7 +269,7 @@ return (
         </div>
         </div>
 
-         <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5">
+        <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5">
         <div className="flex items-center gap-2 mb-3">
         <span className="text-lg">🏪</span>
         <h3 className="text-xs font-black uppercase tracking-widest text-gray-600">
