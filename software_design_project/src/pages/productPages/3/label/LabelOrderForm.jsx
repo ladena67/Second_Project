@@ -605,7 +605,7 @@ return (
 
     {/* ── RIGHT: Sidebar ──────────────────────────────── */}
     <div className="xl:col-span-1">
-    <div className="sticky top-6 flex flex-col gap-4">
+    <div className="sticky top-35 flex flex-col gap-4">
 
         {/* Flyer Preview Card */}
         <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">

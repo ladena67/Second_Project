@@ -69,12 +69,12 @@ const STEPS = [
 ]
 
 const QUICK_FACTS = [
-{ label: "B&W per page",     value: "from ₱2"        },
-{ label: "Colored per page", value: "from ₱10"       },
-{ label: "Scanning",         value: "from ₱3"        },
-{ label: "Walk-in",          value: "Same day"       },
-{ label: "Bulk orders",      value: "1–2 days"       },
-{ label: "Hours",            value: "Mon–Sat 8AM–6PM"},
+{ label: "B&W per page",     value: "from ₱2" },
+{ label: "Colored per page", value: "from ₱10" },
+{ label: "Scanning",         value: "from ₱3" },
+{ label: "Walk-in",          value: "Same day" },
+{ label: "Bulk orders",      value: "1–2 days" },
+{ label: "Hours",            value: "Mon–Sat" },
 ]
 
 // ── Main Component ─────────────────────────────────────────────────────────────
@@ -224,7 +224,7 @@ return (
 
     {/* ── RIGHT: Info Panel (mirrors Summary sidebar) ──── */}
     <div className="xl:col-span-1">
-    <div className="sticky top-6 flex flex-col gap-4">
+    <div className="sticky top-35 not-[]:flex flex-col gap-4">
 
         {/* Quick Reference Card — mirrors SummaryCard */}
         <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
@@ -269,29 +269,46 @@ return (
         </div>
         </div>
 
-        {/* Store Info Card — mirrors HelpCard */}
-        <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5">
+         <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5">
         <div className="flex items-center gap-2 mb-3">
-            <span className="text-lg">🏪</span>
-            <h3 className="text-xs font-black uppercase tracking-widest text-gray-600">Visit Us</h3>
+        <span className="text-lg">🏪</span>
+        <h3 className="text-xs font-black uppercase tracking-widest text-gray-600">
+            Visit Us
+        </h3>
         </div>
+
         <div className="flex flex-col gap-2">
-            <div className="flex items-center gap-2 text-xs text-gray-600">
+
+        <div className="flex items-center gap-2 text-xs text-gray-600">
             <span>📞</span>
-            <span className="font-semibold">+63 9XX XXX XXXX</span>
-            </div>
-            <div className="flex items-center gap-2 text-xs text-gray-600">
+            <span className="font-semibold">0947-463-1561</span>
+        </div>
+
+        <div className="flex items-center gap-2 text-xs text-gray-600">
+            <span>📞</span>
+            <span className="font-semibold">0921-389-5171</span>
+        </div>
+
+        <div className="flex items-center gap-2 text-xs text-gray-600">
             <span>📧</span>
-            <span className="font-semibold">hello@yourprintshop.com</span>
-            </div>
-            <div className="flex items-center gap-2 text-xs text-gray-600">
+            <span className="font-semibold">picktwoprint@gmail.com</span>
+        </div>
+
+        <div className="flex items-center gap-2 text-xs text-gray-600">
+            <span>📧</span>
+            <span className="font-semibold">picktwoprint@yahoo.com</span>
+        </div>
+
+        <div className="flex items-center gap-2 text-xs text-gray-600">
             <span>🕐</span>
-            <span className="font-semibold">Mon – Sat · 8:00 AM – 6:00 PM</span>
-            </div>
-            <div className="flex items-center gap-2 text-xs text-gray-600">
+            <span className="font-semibold">Mon – Sat</span>
+        </div>
+
+        <div className="flex items-center gap-2 text-xs text-gray-600">
             <span>📍</span>
-            <span className="font-semibold">123 Sample St., Your City</span>
-            </div>
+            <span className="font-semibold"> 2ND FLOOR DIAMOND ARCADE MALL, CUBAO, QUEZON CITY </span>
+        </div>
+
         </div>
         </div>
 

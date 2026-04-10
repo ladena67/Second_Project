@@ -9,13 +9,21 @@ import FrostedStickerOrderForm from "./2/frosted/FrostedStickerOrderForm"
 import LanyardOrderForm from "./2/lanyard/LanyardOrderForm"
 import PhotocopyOrderForm from "./2/photocopy/PhotocopyOrderForm"
 import PVCOrderForm from "./2/pvc/PVCOrderForm"
+import FlyersOrderForm from "./3/flyers/FlyersOrderForm"
+import MousePadOrderForm from "./3/mousepad/MousepadOrderForm"
 import TransparentStickerOrderForm from "./2/transparent/TransparentStickerOrderForm"
 import ButtonOrderForm from "./3/button/ButtonOrderForm"
 import CapOrderForm from "./3/cap/CapOrderForm"
-
-
-
-
+import LabelOrderForm from "./3/label/LabelOrderForm"
+import LeafletsOrderForm from "./3/leaflets/LeafletsOrderForm"
+import PanaFlexOrderForm from "./3/panaflex/PanaflexOrderForm"
+import PosterOrderForm from "./3/poster/PosterOrderForm"
+import XBannerOrderForm from "./3/x-banner/X-BannerOrderForm"
+import BagTagOrderForm from "./4/bagtag/BagTagOrderForm"
+import EcoBagOrderForm from "./4/ecobag/EcoBagOrderForm"
+import KeyChainOrderForm from "./4/keychain/KeyChainOrderForm"
+import BacklitOrderForm from "./5/backlit/BackLitOrderForm"
+import UmbrellaOrderForm from "./5/umbrella/UmbrellaOrderForm"
 
 // ── Helper ─────────────────────────────────────────────────────────────────────
 function toReadable(slug) {
@@ -92,6 +100,66 @@ Form:     PVCOrderForm,
 label: "Transparent Sticker Printing",
 subtitle: "Clear vinyl stickers with white ink options for glass, plastic, and packaging.",
 Form: TransparentStickerOrderForm,
+},
+"flyers": {
+label: "Flyers Printing",
+subtitle: "Bulk flyer printing with customizable paper, size, and finishing options.",
+Form: FlyersOrderForm,
+},
+"mousepad": {
+label: "Mousepad Printing",
+subtitle: "Customize your mousepad with size, material, and design.",
+Form: MousePadOrderForm,
+},
+"leaflets": {
+label: "Leaflets Printing",
+subtitle: "Folded marketing leaflets with customizable paper, size, and finishing options.",
+Form: LeafletsOrderForm,
+},
+"panaflex": {
+label: "Panaflex Printing",
+subtitle: "Large-format outdoor banners with customizable size, material, and installation options.",
+Form: PanaFlexOrderForm,
+},
+"label": {
+label: "Label Printing",
+subtitle: "Custom sticker labels for packaging, branding, and products.",
+Form: LabelOrderForm,
+},
+"poster": {
+label:    "Poster Printing",
+subtitle: "High-quality poster printing for events, displays, and more.",
+Form:     PosterOrderForm,
+},
+"x-banner": {
+label:    "X-Banner Printing",
+subtitle: "Custom X-stand banners with optional stand hardware — perfect for events and promotions.",
+Form:     XBannerOrderForm,
+},
+"backlit": {
+label:    "Backlit Printing",
+subtitle: "Premium illuminated signage for lightboxes, advertising boards, and display panels.",
+Form:     BacklitOrderForm,
+},
+"umbrella": {
+label:    "Umbrella Printing",
+subtitle: "Custom printed umbrellas — folding, stick, or golf style with full canopy options.",
+Form:     UmbrellaOrderForm,
+},
+"bagtag": {
+label:    "Bag Tag Printing",
+subtitle: "Custom luggage tags, ID tags, and identification labels — PVC, acrylic, and laminated.",
+Form:     BagTagOrderForm,
+},
+"eco-bag": {
+label:    "Eco Bag Printing",
+subtitle: "Custom tote, canvas, and drawstring bags — screen print, embroidery, and bulk orders supported.",
+Form:     EcoBagOrderForm,
+},
+"keychain": {
+label:    "Keychain Printing",
+subtitle: "Custom acrylic, PVC, metal, and wooden keychains — with glitter, holographic, and bulk options.",
+Form:     KeyChainOrderForm,
 },
 }
 

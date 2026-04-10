@@ -683,7 +683,7 @@ return (
 
     {/* ── RIGHT: Summary ────────────────────────────── */}
     <div className="xl:col-span-1">
-    <div className="sticky top-6 flex flex-col gap-4">
+    <div className="sticky top-35 flex flex-col gap-4">
 
         <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
         <div className="px-6 py-4 bg-linear-to-r from-red-500 to-red-600">
